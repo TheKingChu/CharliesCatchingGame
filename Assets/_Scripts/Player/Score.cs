@@ -9,6 +9,11 @@ public class Score : MonoBehaviour
     int score = 0;
     [SerializeField] GameObject loseCanvas;
 
+
+    private void Start()
+    {
+        
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,7 +30,13 @@ public class Score : MonoBehaviour
 
         if (other.gameObject.CompareTag("Bomb"))
         {
-            //Instantiate(loseCanvas);
+            StartCoroutine(KillPlayer());
         }
+    }
+
+    IEnumerator KillPlayer()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(loseCanvas);
     }
 }

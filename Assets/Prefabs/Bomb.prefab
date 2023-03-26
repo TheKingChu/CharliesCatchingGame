@@ -4883,7 +4883,7 @@ GameObject:
   - component: {fileID: 3859174728064314361}
   - component: {fileID: 3859174728064314360}
   - component: {fileID: 6616862302571999275}
-  - component: {fileID: -4950518835633494545}
+  - component: {fileID: -1787135600355719861}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Bomb
@@ -4986,7 +4986,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-4950518835633494545
+--- !u!114 &-1787135600355719861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4995,6 +4995,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3859174728064314363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f93c427f9b1d041a1f531c6953ea9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f92e3bcff78a5b45919f846d7293d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particleEffect: {fileID: 3859174727843613148}
