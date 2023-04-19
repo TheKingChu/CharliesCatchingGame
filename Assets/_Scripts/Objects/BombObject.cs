@@ -13,5 +13,10 @@ public class BombObject : MonoBehaviour
         {
             particleEffect.SetActive(true);
         }
+
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

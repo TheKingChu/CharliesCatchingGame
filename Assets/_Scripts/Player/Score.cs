@@ -5,19 +5,20 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
+    public static Score instance;
+
     public TMP_Text scoreText;
     int score = 0;
     [SerializeField] GameObject loseCanvas;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
-        
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
+        scoreText.text = "Score: 0";
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,6 +33,12 @@ public class Score : MonoBehaviour
         {
             StartCoroutine(KillPlayer());
         }
+    }
+
+    public void ResetScore()
+    {
+        score = 0;
+        scoreText.text = "Score: " + score.ToString();
     }
 
     IEnumerator KillPlayer()

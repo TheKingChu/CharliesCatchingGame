@@ -22,5 +22,10 @@ public class CoinObject : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            Score.instance.ResetScore();
+        }
     }
 }

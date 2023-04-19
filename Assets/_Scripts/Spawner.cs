@@ -6,8 +6,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     //objects to be spawned
-    [SerializeField] GameObject coinPrefab;
-    [SerializeField] GameObject bombPrefab;
+    [SerializeField] GameObject[] fallingObjects;
 
     //The bounds of the box collider that is added to the Spawner object
     private Bounds bounds;
@@ -34,7 +33,7 @@ public class Spawner : MonoBehaviour
         float y = Random.Range(-bounds.extents.y, bounds.extents.y);
 
 
-        GameObject coins = GameObject.Instantiate(coinPrefab);
+        GameObject coins = GameObject.Instantiate(fallingObjects[0]);
         coins.transform.position = bounds.center + new Vector3(x,y,z);
     }
 
@@ -45,7 +44,7 @@ public class Spawner : MonoBehaviour
         float y = Random.Range(-bounds.extents.y, bounds.extents.y);
 
 
-        GameObject bombs = GameObject.Instantiate(bombPrefab);
+        GameObject bombs = GameObject.Instantiate(fallingObjects[1]);
         bombs.transform.position = bounds.center + new Vector3(x, y, z);
     }
 
