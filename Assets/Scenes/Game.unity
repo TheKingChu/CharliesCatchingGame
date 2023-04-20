@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 49947142}
   - component: {fileID: 49947143}
   - component: {fileID: 49947144}
+  - component: {fileID: 49947145}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -184,6 +185,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &49947145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49947141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c51793dac599444ba78c31315b58b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 5
+  panel: {fileID: 1299998656}
 --- !u!1001 &50318708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1072,6 +1087,7 @@ GameObject:
   - component: {fileID: 1299998657}
   - component: {fileID: 1299998659}
   - component: {fileID: 1299998658}
+  - component: {fileID: 1299998660}
   m_Layer: 5
   m_Name: Checkpoint_Panel
   m_TagString: Untagged
@@ -1140,6 +1156,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299998656}
   m_CullTransparentMesh: 1
+--- !u!114 &1299998660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299998656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 8.15, y: -9.45}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1418159547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,6 +1318,7 @@ GameObject:
   - component: {fileID: 1521694070}
   - component: {fileID: 1521694069}
   - component: {fileID: 1521694068}
+  - component: {fileID: 1521694071}
   m_Layer: 5
   m_Name: Checkout_Button
   m_TagString: Untagged
@@ -1358,7 +1390,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1521694069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 49947145}
+        m_TargetAssemblyTypeName: Checkpoints, Assembly-CSharp
+        m_MethodName: CheckoutButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1521694069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1441,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521694066}
   m_CullTransparentMesh: 1
+--- !u!114 &1521694071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521694066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 8.15, y: -9.45}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1616230881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1738,7 @@ GameObject:
   - component: {fileID: 1673751132}
   - component: {fileID: 1673751131}
   - component: {fileID: 1673751130}
+  - component: {fileID: 1673751133}
   m_Layer: 5
   m_Name: Continue_Button
   m_TagString: Untagged
@@ -1750,7 +1810,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1673751131}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 49947145}
+        m_TargetAssemblyTypeName: Checkpoints, Assembly-CSharp
+        m_MethodName: ContinueGameButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1673751131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1789,6 +1861,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673751128}
   m_CullTransparentMesh: 1
+--- !u!114 &1673751133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673751128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 8.15, y: -9.45}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1748843950
 PrefabInstance:
   m_ObjectHideFlags: 0

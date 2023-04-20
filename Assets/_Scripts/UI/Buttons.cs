@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    public void MenuButtons()
+    public void LoadGame()
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1.0f;
@@ -19,5 +19,10 @@ public class Buttons : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void OpenShop()
+    {
+        SceneManager.LoadScene(2);
     }
 }
