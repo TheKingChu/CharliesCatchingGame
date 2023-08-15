@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
     public static Score instance;
 
     public TMP_Text scoreText;
-    int score = 0;
+    public int score = 0;
     [SerializeField] GameObject loseCanvas;
 
     private void Awake()
